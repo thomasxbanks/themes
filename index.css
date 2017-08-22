@@ -77,19 +77,27 @@ h2 {
 
 nav {
   text-align: center;
+  font-size: 0;
 }
 
 button {
   -webkit-appearance: none;
   border: none;
   background: none;
-  padding: 1rem 2rem;
+  padding: 1rem;
   margin: 0.5rem;
   box-shadow: inset -1px -1px 0 var(--color-darkest), inset 1px 1px 0 var(--color-darkest);
   transition: ease-in 300ms;
   cursor: pointer;
+  display: inline-block;
+  width: calc(50% - 1rem);
 }
-
+@media (min-width: 600px) {
+  button {
+    width: calc(25% - 1rem);
+  }
+  
+}
 button:focus {
   outline-color: var(--color-darkest);
 }
