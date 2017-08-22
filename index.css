@@ -1,0 +1,100 @@
+html {
+  font-size: 18px;
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-darkest: #a1213d;
+  --color-dark: #656565;
+  --color-light: #fafafa;
+  --color-lightest: #ffffff;
+  --theme-bg-color: var(--color-lightest);
+  --theme-font-color: var(--color-dark);
+}
+
+.theme-one {
+  --color-darkest: tomato;
+}
+
+.theme-two {
+  --color-darkest: dodgerblue;
+}
+
+.theme-three {
+  --color-darkest: green;
+}
+
+.theme-four {
+  --color-darkest: #a1213d;
+}
+
+.theme-dark {
+  --theme-bg-color: var(--color-darkest);
+  --theme-font-color: var(--color-lightest);
+}
+
+.theme-light {
+  --theme-bg-color: var(--color-light);
+  --theme-font-color: var(--color-darkest);
+}
+
+body {
+  margin: 0;
+  font-family: "Overpass", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+  background: var(--color-lightest);
+}
+
+main {
+  display: block;
+}
+
+section {
+  background: var(--theme-bg-color);
+  color: var(--theme-font-color);
+  padding: 1rem;
+  transition: ease-in 300ms;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(960px + 2rem);
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+nav {
+  text-align: center;
+}
+
+button {
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  box-shadow: inset -1px -1px 0 var(--color-darkest), inset 1px 1px 0 var(--color-darkest);
+  transition: ease-in 300ms;
+  cursor: pointer;
+}
+
+button:focus {
+  outline-color: var(--color-darkest);
+}
+
+button:hover {
+  box-shadow: inset -100px -100px 0 var(--color-darkest), inset 100px 100px 0 var(--color-darkest);
+  color: var(--color-lightest);
+}
