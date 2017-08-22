@@ -9,8 +9,9 @@ html * {
 :root {
   --color-darkest: #a1213d;
   --color-dark: #656565;
-  --color-light: #fafafa;
+  --color-light: #fafafc;
   --color-lightest: #ffffff;
+
   --theme-bg-color: var(--color-lightest);
   --theme-font-color: var(--color-dark);
 }
@@ -61,7 +62,14 @@ section {
   padding: 1rem;
   transition: ease-in 300ms;
 }
-
+section .container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
 .container {
   width: 100%;
   max-width: calc(960px + 2rem);
@@ -71,13 +79,17 @@ section {
 
 h2 {
   font-family: "Comfortaa", Arial, Helvetica, sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
 }
 
 nav {
+  position: fixed;
+  background-color: var(--color-lightest);
   text-align: center;
   font-size: 0;
+  width: 100%;
+  box-shadow: 0 0 0.25rem rgba(0,0,0,0.3);
 }
 
 button {
@@ -86,7 +98,8 @@ button {
   background: none;
   padding: 1rem;
   margin: 0.5rem;
-  box-shadow: inset -1px -1px 0 var(--color-darkest), inset 1px 1px 0 var(--color-darkest);
+  background: var(--color-darkest);
+  color: var(--color-lightest);
   transition: ease-in 300ms;
   cursor: pointer;
   display: inline-block;
@@ -96,13 +109,15 @@ button {
   button {
     width: calc(25% - 1rem);
   }
-  
+  section .container {
+    height: 50vh;
+  }
 }
 button:focus {
   outline-color: var(--color-darkest);
 }
 
 button:hover {
-  box-shadow: inset -100px -100px 0 var(--color-darkest), inset 100px 100px 0 var(--color-darkest);
-  color: var(--color-lightest);
+  background: var(--color-light);
+  color: var(--color-darkest);
 }
