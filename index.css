@@ -17,7 +17,7 @@ html * {
 }
 
 .theme-one {
-  --color-darkest: tomato;
+  --color-darkest: #a1213d;
 }
 
 .theme-two {
@@ -29,7 +29,7 @@ html * {
 }
 
 .theme-four {
-  --color-darkest: #a1213d;
+  --color-darkest: tomato;
 }
 
 .theme-dark {
@@ -54,6 +54,7 @@ body {
 
 main {
   display: block;
+  padding-top: 3rem;
 }
 
 section {
@@ -89,7 +90,6 @@ nav {
   text-align: center;
   font-size: 0;
   width: 100%;
-  box-shadow: 0 0 0.25rem rgba(0,0,0,0.3);
 }
 
 button {
@@ -97,27 +97,28 @@ button {
   border: none;
   background: none;
   padding: 1rem;
-  margin: 0.5rem;
+  margin: 0;
   background: var(--color-darkest);
   color: var(--color-lightest);
   transition: ease-in 300ms;
   cursor: pointer;
   display: inline-block;
-  width: calc(50% - 1rem);
+  width: 25%;
+  font-size: 1rem;
+  line-height: 1rem;
 }
 @media (min-width: 600px) {
   button {
-    width: calc(25% - 1rem);
+    width: 25%;
   }
   section .container {
     height: 50vh;
   }
 }
 button:focus {
-  outline-color: var(--color-darkest);
+  outline: var(--color-darkest) thick;
 }
 
 button:hover {
-  background: var(--color-light);
-  color: var(--color-darkest);
+  
 }
