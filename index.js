@@ -1,5 +1,4 @@
-const blocks = [
-  {
+const blocks = [{
     theme: 'dark',
     title: 'Dark theme',
     copy: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos itaque ad minima impedit commodi voluptas consequuntur, quisquam, et dolores soluta maxime pariatur. Excepturi animi veritatis tempore delectus, neque nisi tenetur?'
@@ -31,12 +30,13 @@ const makeBlock = (block) => {
     </section>
   `
 }
-blocks.forEach((block)=>{
+
+blocks.forEach((block) => {
   main.innerHTML += makeBlock(block)
 })
 
-document.querySelectorAll('nav button').forEach((button)=>{
-  button.addEventListener('click', (e)=>{
+document.querySelectorAll('nav button').forEach((button) => {
+  button.addEventListener('click', (e) => {
     document.documentElement.className = `theme-${e.currentTarget.getAttribute('data-target')}`
   })
 })
