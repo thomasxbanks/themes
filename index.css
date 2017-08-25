@@ -9,26 +9,26 @@ html * {
 :root {
   --color-darkest: #a1213d;
   --color-dark: #656565;
-  --color-light: #fafafc;
+  --color-light: #dadadf;
   --color-lightest: #ffffff;
 
   --theme-bg-color: var(--color-lightest);
   --theme-font-color: var(--color-dark);
 }
 
-.theme-one {
+.theme-0 {
   --color-darkest: #a1213d;
 }
 
-.theme-two {
+.theme-1 {
   --color-darkest: dodgerblue;
 }
 
-.theme-three {
+.theme-2 {
   --color-darkest: green;
 }
 
-.theme-four {
+.theme-3 {
   --color-darkest: tomato;
 }
 

@@ -20,6 +20,12 @@ const blocks = [{
   }
 ]
 const main = document.querySelector('main')
+const nav = document.querySelector('nav')
+const makeNav = (block, index) => {
+  return `
+    <button class="theme-${index}" id="set-${index}" data-target="${index}">Theme ${index}</button>
+  `
+}
 const makeBlock = (block) => {
   return `
     <section class="theme-${block.theme}">
@@ -31,8 +37,9 @@ const makeBlock = (block) => {
   `
 }
 
-blocks.forEach((block) => {
+blocks.forEach((block, index) => {
   main.innerHTML += makeBlock(block)
+  nav.innerHTML += makeNav(block, index)
 })
 
 document.querySelectorAll('nav button').forEach((button) => {
